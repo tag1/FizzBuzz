@@ -1,10 +1,18 @@
-for (i = 1; i < 101; i++) {
-console.log(i);
-}
 
+	for (var number = 1; number < 101; number++) {
+	console.log(number);
+	if (number % 15 === 0) {
+		console.log("fizzbuzzy");
+	} 
+	else
+		if (number % 5 === 0) {
+		console.log("buzz");
+		}
+		else
+			if (number % 3 === 0) {
+				console.log("fizz")
+			};
+};	
 
-
-var fizzBuzz = function () {
 	
 
-}
