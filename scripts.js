@@ -1,61 +1,34 @@
 $(document).ready(function () {
 
+	var enterResponse = function(integer) {
+		for (number = 1; number <= integer; number++)
+			if (number % 15 === 0) {
+				$(".stuff").replaceWith("<p class='stuff'>" + "fizzbuzzy" + "</p>");
+			} 
+			else
+				if (number % 5 === 0) {
+					$(".stuff").replaceWith("<p class='stuff'>" + "buzz" + "</p>");
+				}
+				else
+					if (number % 3 === 0) {
+						$(".stuff").replaceWith("<p class='stuff'>" + "fizzy" + "</p>");
+					}
+					else
+						$(".stuff").replaceWith("<p class='stuff'>" + number + "</p>");
+		};
 
 
 	$("button").click(function() {
-		event.preventDefault();
-		var number = $("input").val();
-		$(".stuff").append("<p>" + number+ "</p>");
+		var magicNumber = $("input").val();
+		var magicInput = +magicNumber;
 		$("input").val(" ");
-	}
+		enterResponse(magicInput);
+	})
+	
+	
 
-)}
+}
 );
 
-/*
-$(document).ready(function () {
-
-	for (number = 1; number < 101; number++) {
-	if (number % 15 === 0) {
-		$("p").append("fizzbuzzy" + "<br><br>");
-	} 
-		else
-			if (number % 5 === 0) {
-			$("p").append("buzz" + "<br><br>");
-			}
-			else
-				if (number % 3 === 0) {
-					$("p").append("fizz" + "<br><br>");
-				}
-				else
-					 $("p").append(number + "<br><br>");
-		}
-	}	
-);
-*/	
-/*
-var enterBox = function() {
-	var x = $("input").val(+"");
-		if (x === ) {};
-}
-
-var enterResponse = function(integer) {
-	for (var number = 1; number != integer; number++)
-		if (number % 15 === 0) {
-		$("p").append("fizzbuzzy" + "<br><br>");
-	} 
-		else
-			if (number % 5 === 0) {
-			$("p").append("buzz" + "<br><br>");
-			}
-			else
-				if (number % 3 === 0) {
-					$("p").append("fizz" + "<br><br>");
-				}
-				else
-					 $("p").append(number + "<br><br>");
-	};
-}
-*/
 
 
